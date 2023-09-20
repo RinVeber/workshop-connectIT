@@ -1,0 +1,13 @@
+.search {
+    padding: 10px 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+
+&__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+}

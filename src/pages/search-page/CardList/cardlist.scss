@@ -1,0 +1,9 @@
+.cardlist {
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
