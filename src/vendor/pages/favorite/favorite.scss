@@ -2,18 +2,25 @@
     padding: 90px 60px;
 
     &__container-text {
-        max-width: 297px;
+        max-width: 750px;
         height: 96px;
         display: flex;
         flex-direction: column;
         gap: 8px;
     }
+   
     &__title {
         font-size: 48px;
         font-weight: 700;
         line-height: 52px;
         margin: 0;
         margin-bottom: 8px;
+    }
+    &__title-list {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 32px;
+        color: #242424;
     }
     &__subtitle {
         margin: 0;

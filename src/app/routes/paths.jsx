@@ -4,4 +4,5 @@ export const paths = {
   favorite: "/favorites",
   search: "/search",
   notFound: "/*",
+  results: '/results',
 };
