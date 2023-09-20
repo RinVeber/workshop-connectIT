@@ -5,8 +5,8 @@ import { useEventsContext, formatTimeRange, Loader } from "it-events-frontend";
 import {useNavigate, useParams} from 'react-router-dom';
 
 
-export default function WatchAlso() {
-const { recommendedEvents, handleCardClick } = useEventsContext();
+export default function WatchAlso(recommendedEvents) {
+const { handleCardClick } = useEventsContext();
   
 
 const navigate = useNavigate();

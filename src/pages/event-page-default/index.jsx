@@ -86,7 +86,7 @@ export default function DefaultPage() {
       )}
 
 {recommendedEvents.length >0 ? (
-  <WatchAlso />
+  <WatchAlso recommendedEvents={recommendedEvents}/>
 ): (
 null
 )}
