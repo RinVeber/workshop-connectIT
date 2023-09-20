@@ -1,7 +1,7 @@
 import React from "react";
 import favorete from "../../../assets/images/favorite.svg";
 import link from "../../../assets/images/action.svg";
-import { useEventsContext, formatTimeRange, Loader } from "it-events-frontend";
+import { useEventsContext, formatTimeRange } from "it-events-frontend";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function WatchAlso() {

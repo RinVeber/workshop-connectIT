@@ -14,7 +14,7 @@ export default function FavoritePage() {
       </div>
       <SortBar onSort={(e) => handlerSort(e)} />
       <div className="favorite__content">
-        {favoriteEvents ? (
+        {!favoriteEvents.length > 0 ? (
           <div className="favorite__container-text">
             <div className="favorite__title-list">Список пуст</div>
             <div className="favorite__subtitle">
