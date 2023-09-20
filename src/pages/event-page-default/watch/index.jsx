@@ -12,7 +12,6 @@ const { handleCardClick } = useEventsContext();
 const navigate = useNavigate();
 const eventId = useParams();
 
-console.log(eventId);
 
 React.useEffect(() => {
 

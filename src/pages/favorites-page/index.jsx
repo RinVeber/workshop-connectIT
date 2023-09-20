@@ -1,10 +1,11 @@
-import {mokLinkFavorite} from '../../utils/constants.js';
-import { SortBar } from 'it-events-frontend';
+import { SortBar, useEventsContext, CardList } from 'it-events-frontend';
 
 
 export default function FavoritePage() {
-  const handlerSort = () => {
+  const {favoriteEvents} = useEventsContext();
+  console.log(favoriteEvents);
 
+  const handlerSort = () => {
   }
   return (
     <section className="favorite">
@@ -12,8 +13,9 @@ export default function FavoritePage() {
         <h1 className="favorite__title">Избранное</h1>
         <h6 className="favorite__subtitle">Сохраненные события</h6>
       </div>
-      <div className="favorite__content">
       <SortBar onSort={handlerSort} />
+      <div className="favorite__content">
+      <CardList title={'Популярное'} events={favoriteEvents} cardDirection={'column'} listDirection={'row'}/>
       </div>
     </section>
   )

@@ -10,7 +10,6 @@ export default function SearchPage() {
   const [listEvents, setListEvents] = React.useState();
   const { popularEvents } = useEventsContext();
 
-  console.log(popularEvents);
 
 
   return (
