@@ -40,7 +40,7 @@
     &__link-icon-like{
         width: 24px;
         height: 24px;
-        background: url(../../../assets//images//favorite.svg) no-repeat;
+        background: url(../../../assets/images/favorite.svg) no-repeat;
         transition: all ease .3s;
         &:hover {
             opacity: 0.6;
@@ -48,9 +48,8 @@
         &_active {
             width: 24px;
         height: 24px;
-        background: url(../../../assets//images//favorite.svg) no-repeat;
         transition: all ease .3s;
-            background: url(../../../assets//images/like-button_active.svg) no-repeat;
+            background: url(../../../assets/images/like-button_active.svg) no-repeat;
         }
     }
     &__link-icon{

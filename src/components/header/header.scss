@@ -31,6 +31,13 @@ border-bottom: 1px solid #00000014;
   &__favorite-icon {
     width: 19px;
     height: 19px;
+    background: url(../../assets//images/favorite.svg) no-repeat center;
+
+    &_active {
+      width: 19px;
+      height: 19px;
+      background: url(../../assets//images/like-button_active.svg) no-repeat center;
+    }
   }
 
   &__favorite-title {

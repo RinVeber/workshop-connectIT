@@ -5,11 +5,9 @@ import { useEventsContext, formatTimeRange } from "it-events-frontend";
 import { useNavigate } from "react-router-dom";
 
 export default function WatchAlso({items}) {
-  const { recommendedEvents, handleCardClick } = useEventsContext();
+  const { recommendedEvents, handleCardClick, toggleFavorite } = useEventsContext();
 
   const navigate = useNavigate();
-
-  React.useEffect(() => {}, [recommendedEvents]);
 
   function handleClick(item) {
     navigate(`../events/${item.id}`);
@@ -31,10 +29,10 @@ export default function WatchAlso({items}) {
                     className="watch__image-overlay"
                     onClick={() => handleClick(item)}
                   />
-                  <img
-                    src={favorete}
-                    alt="клик"
-                    className="watch__btn-favorite"
+                  <div
+                  
+                    className={item.isLiked ? " watch__btn-favorite watch__btn-favorite_active" :"watch__btn-favorite"}
+                    onClick = {() => toggleFavorite(item)}
                   />
                   <div className="watch__item-price">
                     <span className="watch__price">{item.price} &#8381;</span>
