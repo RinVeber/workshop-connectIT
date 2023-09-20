@@ -11,6 +11,8 @@ export default function DefaultPage() {
   const { recommendedEvents, selectedEvent, toggleFavorite, setSelectedEvent } =
     useEventsContext();
 
+    const recommended = recommendedEvents.slice(0, 4)
+
   const mokDay = "Вт, 23 мая";
   React.useEffect(() => {
     setSelectedEvent(selectedEvent);
@@ -18,9 +20,10 @@ export default function DefaultPage() {
 
   return (
     <section className="default">
+      <div className="default__content">
       {selectedEvent !== null ? (
-        <>
-          <div className="default__content">
+        
+          <>
             <div className="default__wrap">
               <div className="default__container-text">
                 <div className="default__container-title">
@@ -66,7 +69,7 @@ export default function DefaultPage() {
                 </div>
                 <Link to={selectedEvent.url} className="default__btn">
                   <div className="default__btn-text">
-                    Перейти на сайт организатора &#8594;
+                   Сайт мерприятия &#8594;
                   </div>
                 </Link>
               </div>
@@ -82,12 +85,13 @@ export default function DefaultPage() {
               <DescriptionTabs selectedEvent={selectedEvent} />
               {/* <Tab linkData={mokLink} selectedEvent={selectedEvent}/> */}
             </div>
-          </div>
-        </>
+       
+            </>
       ) : (
         <Loader />
       )}
-      <WatchAlso />
+         </div>
+      <WatchAlso items = {recommended}/>
     </section>
   );
 }

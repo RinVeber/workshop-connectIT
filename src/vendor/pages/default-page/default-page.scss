@@ -121,7 +121,8 @@
     }
     &__btn {
         margin-top: 40px;
-        width: 308px;
+        max-width: 308px;
+        min-width: 150px;
         height: 44px;
         background-color: #674EAE;
         color: white;
@@ -162,5 +163,12 @@
 
     &__container-navbar {
         max-width: 608px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .default__wrap {
+        display: flex;
+        flex-direction: column-reverse;
     }
 }

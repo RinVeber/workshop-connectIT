@@ -10,9 +10,9 @@
     }
     &__list {
         max-width: 1232px;
-        display: flex;
-        
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
         height: 342px;
         gap: 32px;
         padding: 0;
@@ -111,5 +111,14 @@
         height: 5px;
         background-image: url('../../../assets/images/dot.svg');
         background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .watch__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 15px;
     }
 }

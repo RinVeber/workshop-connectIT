@@ -2,26 +2,26 @@ import React from "react";
 import favorete from "../../../assets/images/favorite.svg";
 import link from "../../../assets/images/action.svg";
 import { useEventsContext, formatTimeRange } from "it-events-frontend";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export default function WatchAlso() {
+export default function WatchAlso({items}) {
   const { recommendedEvents, handleCardClick } = useEventsContext();
 
   const navigate = useNavigate();
-  const eventId = useParams();
 
   React.useEffect(() => {}, [recommendedEvents]);
 
   function handleClick(item) {
     navigate(`../events/${item.id}`);
+    handleCardClick(item);
   }
 
   return (
     <section className="watch">
       <div className="watch__title">Смотрите также</div>
-      {recommendedEvents.length > 0 ? (
+      {items.length > 0 ? (
         <ul className="watch__list">
-          {recommendedEvents.splice(0, 4).map((item) => {
+          {items.map((item) => {
             return (
               <li key={item.id} className="watch__list-item">
                 <div className="watch__overlay">
