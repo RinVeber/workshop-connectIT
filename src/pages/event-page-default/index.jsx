@@ -8,10 +8,13 @@ import { Loader, DescriptionTabs } from "it-events-frontend";
 import { formatTimeRange } from "it-events-frontend";
 
 export default function DefaultPage() {
-  const { recommendedEvents, selectedEvent, toggleFavorite } =
+  const { recommendedEvents, selectedEvent, toggleFavorite, setSelectedEvent } =
     useEventsContext();
 
   const mokDay = "Вт, 23 мая";
+  React.useEffect(() => {
+    setSelectedEvent(selectedEvent);
+  }, [selectedEvent]);
 
   return (
     <section className="default">
@@ -84,14 +87,7 @@ export default function DefaultPage() {
       ) : (
         <Loader />
       )}
-
-{recommendedEvents.length >0 ? (
-  <WatchAlso recommendedEvents={recommendedEvents}/>
-): (
-null
-)}
-      
-  
+      <WatchAlso />
     </section>
   );
 }
