@@ -15,7 +15,7 @@ export default function WatchAlso({items, isLoading, setIsLoading}) {
   }
 
   return (
-    <section className="watch">
+    <div className="watch">
       <div className="watch__title">Смотрите также</div>
       {isLoading ? (
         <ul className="watch__list">
@@ -56,6 +56,6 @@ export default function WatchAlso({items, isLoading, setIsLoading}) {
           })}
         </ul>
       ) : (null)}
-    </section>
+    </div>
   );
 }

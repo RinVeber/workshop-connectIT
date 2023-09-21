@@ -1,13 +1,20 @@
-import { useEventsContext, CardList } from "it-events-frontend";
+import { useEventsContext, CardList, useIsMobileResolution } from "it-events-frontend";
 import React from "react";
 import { FilterLeftBar } from "../search-page/LeftBar/FilterLeftBar";
 
 export default function Results() {
   const { searchResult, popularEvents } = useEventsContext();
-  console.log(searchResult);
+  const dekstopWidth = useIsMobileResolution(768);
+  const mobileWidth = useIsMobileResolution(500);
+  console.log(dekstopWidth);
+
+  
   return (
     <section className="results">
-      <FilterLeftBar />
+      {!dekstopWidth && (
+ <FilterLeftBar />
+      )}
+     
       <div className="results__content">
         {!searchResult.length > 0 ? (
           <>
@@ -20,16 +27,16 @@ export default function Results() {
             <CardList
               title={"Популярное"}
               events={popularEvents}
-              cardDirection={"column"}
-              listDirection={"row"}
+              cardDirection={dekstopWidth ? "row" : "column"}
+              listDirection={mobileWidth ? "column" : "row"}
             />
           </>
         ) : (
           <CardList
             title={"Результат"}
             events={searchResult}
-            cardDirection={"column"}
-            listDirection={"row"}
+            cardDirection={dekstopWidth ? "row" : "column"}
+            listDirection={mobileWidth ? "column" : "row"}
           />
         )}
       </div>

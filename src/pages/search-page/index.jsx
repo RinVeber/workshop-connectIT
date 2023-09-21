@@ -3,10 +3,13 @@ import { LeftFilterBar } from "it-events-frontend"; //взят из библио
 import { FilterLeftBar } from "./LeftBar/FilterLeftBar"; //скопирован из библиотеки
 import { TopFilterBar, CardList, Loader } from "it-events-frontend";
 import { useEventsContext } from "it-events-frontend";
+import { useIsMobileResolution } from "it-events-frontend";
 
 export default function SearchPage() {
   const [isLoading, setIsLoading] = React.useState(false);
   const { popularEvents } = useEventsContext();
+
+  const mobileWidth = useIsMobileResolution(520);
 
   React.useEffect(() => {
     if (popularEvents !== null) {
@@ -15,6 +18,12 @@ export default function SearchPage() {
       setIsLoading(false);
     }
   }, []);
+
+  if (mobileWidth) {
+    return (<section className="search">
+    <FilterLeftBar />
+    </section>)
+  }
 
   return (
     <section className="search">
