@@ -17,6 +17,7 @@ export default function DefaultPage() {
   const recommended = recommendedEvents.slice(0, 4);
   const mokDay = "Вт, 23 мая";
 
+  console.log( process.env.PUBLIC_URL);
   const fetchSelectedEvent = async (eventId) => {
     try {
       const data = await apiEvents.getSelectedEvent(eventId.id);
