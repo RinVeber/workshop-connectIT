@@ -26,7 +26,7 @@ export default function Tab({selectedEvent, linkData}) {
         </ul>
       </div>
       <div className="navbar__content">
-        <ContentText content={content} />
+        {/* <ContentText content={content} /> */}
         {children}
       </div>
     </section>

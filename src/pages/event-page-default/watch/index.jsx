@@ -1,5 +1,4 @@
 import React from "react";
-import favorete from "../../../assets/images/favorite.svg";
 import link from "../../../assets/images/action.svg";
 import { useEventsContext, formatTimeRange } from "it-events-frontend";
 import { useNavigate } from "react-router-dom";

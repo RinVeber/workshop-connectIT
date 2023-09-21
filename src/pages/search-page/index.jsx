@@ -2,12 +2,10 @@ import React from "react";
 import { LeftFilterBar } from "it-events-frontend"; //взят из библиотеки
 import { FilterLeftBar } from "./LeftBar/FilterLeftBar"; //скопирован из библиотеки
 import { TopFilterBar, CardList, Loader } from "it-events-frontend";
-//import CardList from "./CardList";
 import { useEventsContext } from "it-events-frontend";
 
 export default function SearchPage() {
   const [isLoading, setIsLoading] = React.useState(false);
-  const [listEvents, setListEvents] = React.useState();
   const { popularEvents } = useEventsContext();
 
   React.useEffect(() => {
@@ -18,7 +16,6 @@ export default function SearchPage() {
     }
   }, []);
 
-  
   return (
     <section className="search">
       <FilterLeftBar />
