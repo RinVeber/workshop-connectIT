@@ -17,7 +17,8 @@ export default function SearchPage() {
       setIsLoading(false);
     }
   }, []);
-  console.log(popularEvents);
+
+  
   return (
     <section className="search">
       <FilterLeftBar />
