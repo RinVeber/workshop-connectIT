@@ -35,4 +35,4 @@ export const router = createBrowserRouter([
 
   ]
 }
-]);
+], {basename: paths.search});

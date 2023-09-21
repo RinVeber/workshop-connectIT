@@ -1,7 +1,7 @@
 {
   "name": "workshop",
   "version": "0.1.0",
-  "homepage": "/search", 
+  "homepage": "http://RinVeber.github.io/workshop-connectIT", 
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
