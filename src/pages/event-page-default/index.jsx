@@ -8,10 +8,9 @@ import { formatTimeRange } from "it-events-frontend";
 import { apiEvents } from "it-events-frontend";
 
 export default function DefaultPage() {
-  const { recommendedEvents, toggleFavorite } =
+  const { recommendedEvents, toggleFavorite, selectedEvent, setSelectedEvent } =
     useEventsContext();
 
-  const [selectEvent, setSelectEvent] = React.useState();
   const [isLoading, setIsLoading] = React.useState(false);
   const eventId = useParams();
 
@@ -21,7 +20,7 @@ export default function DefaultPage() {
   const fetchSelectedEvent = async (eventId) => {
     try {
       const data = await apiEvents.getSelectedEvent(eventId.id);
-      setSelectEvent(data);
+      setSelectedEvent(data);
       setIsLoading(true);
       return data;
     } catch (error) {
@@ -42,15 +41,15 @@ export default function DefaultPage() {
             <div className="default__wrap">
               <div className="default__container-text">
                 <div className="default__container-title">
-                  <h1 className="default__title">{selectEvent.title}</h1>
+                  <h1 className="default__title">{selectedEvent.title}</h1>
                   <div className="default__link-container">
                     <div
                       className={
-                        !selectEvent.isLiked
+                        !selectedEvent.isLiked
                           ? "default__link-icon-like"
                           : "default__link-icon-like_active"
                       }
-                      onClick={() => toggleFavorite(selectEvent)}
+                      onClick={() => toggleFavorite(selectedEvent)}
                     />
                     <img
                       src={action}
@@ -64,13 +63,13 @@ export default function DefaultPage() {
                   <span className="default__dot"></span>
                   <span className="default__subtitle">
                     {formatTimeRange(
-                      selectEvent.date_start,
-                      selectEvent.date_end
+                      selectedEvent.date_start,
+                      selectedEvent.date_end
                     )}
                   </span>
                   <span className="default__dot"></span>
                   <span className="default__subtitle">
-                    {selectEvent.address}
+                    {selectedEvent.address}
                   </span>
                 </div>
                 <Link to="/" className="default__online-translation">
@@ -80,9 +79,9 @@ export default function DefaultPage() {
                   </span>
                 </Link>
                 <div className="default__price">
-                  {selectEvent.price} &#8381;
+                  {selectedEvent.price} &#8381;
                 </div>
-                <Link to={selectEvent.url} className="default__btn">
+                <Link to={selectedEvent.url} className="default__btn">
                   <div className="default__btn-text">
                     Сайт мерприятия &#8594;
                   </div>
@@ -90,14 +89,14 @@ export default function DefaultPage() {
               </div>
               <div className="default__container-image">
                 <img
-                  src={selectEvent.image}
+                  src={selectedEvent.image}
                   alt="карточка"
                   className="default__image"
                 />
               </div>
             </div>
             <div className="default__container-navbar">
-              <DescriptionTabs selectedEvent={selectEvent} />
+              <DescriptionTabs selectedEvent={selectedEvent} />
               {/* <Tab linkData={mokLink} selectedEvent={selectedEvent}/> */}
             </div>
           </>

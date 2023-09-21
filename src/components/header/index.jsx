@@ -18,7 +18,6 @@ function toogleClick() {
         <span style={{ color: "#674EAE" }}>{logoName}</span>
       </Link>
       <Link to="/search" className="header__logo">
-        <div>Поиск нажми</div>
       </Link>
       <Link to="/favorites" className="header__btn-container" onClick={() => toogleClick()}>
         <div
