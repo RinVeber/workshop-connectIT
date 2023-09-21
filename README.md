@@ -10,7 +10,7 @@
 
 ### GH-pages
 
-https://rinveber.github.io/search
+https://rinveber.github.io/workshop-connectIT/
 
 ### Макет Figma
 

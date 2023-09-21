@@ -13,7 +13,7 @@ function NotFound() {
       <h3 className="not-found__subtitle">
       С этой страницей что-то случилось или не верно указан адрес
       </h3>
-      <Link to="/">
+      <Link to="/search">
     
       <button type="button" className="not-found__button">
       <span className="not-found__text-btn">На главную &#8594;</span>
