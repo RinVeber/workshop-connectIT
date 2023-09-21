@@ -5,41 +5,24 @@ export default function FavoritePage() {
   const { favoriteEvents } = useEventsContext();
   const [sortedEvents, setSortedEvents] = React.useState(favoriteEvents);
 
-  const handlerSort = (e) => {
-    if (e === "name") {
-      const newSortedEvents = favoriteEvents.sort(function (a, b) {
-        if (a.title < b.title) {
-          return -1;
-        }
-        if (a.title > b.title) {
-          return 1;
-        }
-        return 0;
-      });
-    
-      setSortedEvents([...newSortedEvents]);
-    } else if (e === "price") {
-      const newSortedEvents = favoriteEvents.sort(function (a, b) {
-        if (a.price < b.price) {
-          return -1;
-        }
-        if (a.price > b.price) {
-          return 1;
-        }
-        return 0;
-      });
-      setSortedEvents([...newSortedEvents]);
-    } else if (e === "date") {
-      const newSortedEvents = favoriteEvents.sort(function (a, b) {
-        if (a.date_start < b.date_start) {
-          return -1;
-        }
-        if (a.date_start > b.date_start) {
-          return 1;
-        }
-        return 0;
-      });
-      setSortedEvents([...newSortedEvents]);
+  const customSort = (sortField) => {
+   return function (a, b) {
+      if (a[sortField] < b[sortField]) {
+        return -1;
+      }
+      if (a[sortField] > b[sortField]) {
+        return 1;
+      }
+      return 0;
+    }
+  }
+  const handlerSort = (sortType) => {
+    if (sortType === "name") {
+      setSortedEvents([...favoriteEvents.sort(customSort('title'))]);
+    } else if (sortType === "price") {
+      setSortedEvents([...favoriteEvents.sort(customSort('price'))]);
+    } else if (sortType === "date") {
+      setSortedEvents([...favoriteEvents.sort(customSort('date_start'))]);
     }
   };
 
