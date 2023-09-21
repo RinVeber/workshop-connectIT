@@ -4,20 +4,21 @@ import link from "../../../assets/images/action.svg";
 import { useEventsContext, formatTimeRange } from "it-events-frontend";
 import { useNavigate } from "react-router-dom";
 
-export default function WatchAlso({items}) {
-  const { recommendedEvents, handleCardClick, toggleFavorite } = useEventsContext();
+export default function WatchAlso({items, isLoading, setIsLoading}) {
+  const { handleCardClick, toggleFavorite } = useEventsContext();
 
   const navigate = useNavigate();
 
   function handleClick(item) {
     navigate(`../events/${item.id}`);
     handleCardClick(item);
+    setIsLoading(false)
   }
 
   return (
     <section className="watch">
       <div className="watch__title">Смотрите также</div>
-      {items.length > 0 ? (
+      {isLoading ? (
         <ul className="watch__list">
           {items.map((item) => {
             return (
