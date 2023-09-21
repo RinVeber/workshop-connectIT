@@ -26,6 +26,7 @@ export const router = createBrowserRouter([
     },
     {
       path: paths.search,
+      basename: true,
       element: <SearchPage />,
     },
     {
@@ -35,4 +36,4 @@ export const router = createBrowserRouter([
 
   ]
 }
-], {basename: paths.search});
+], {basename: process.env.PUBLIC_URL + paths.search});
