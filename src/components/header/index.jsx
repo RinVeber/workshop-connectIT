@@ -13,11 +13,9 @@ function toogleClick() {
 
   return (
     <section className="header">
-      <Link to="/search" className="header__logo">
+      <Link to="/" className="header__logo">
         <span>Connect </span>
         <span style={{ color: "#674EAE" }}>{logoName}</span>
-      </Link>
-      <Link to="/search" className="header__logo">
       </Link>
       <Link to="/favorites" className="header__btn-container" onClick={() => toogleClick()}>
         <div
