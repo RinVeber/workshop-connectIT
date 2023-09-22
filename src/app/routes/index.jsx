@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { paths } from './paths';
 import NotFound from '../../pages/not-found';
 import DefaultPage from '../../pages/event-page-default';
@@ -24,16 +24,17 @@ export const router = createBrowserRouter([
       path: paths.favorite,
       element: <FavoritePage />,
     },
-    {
-      path: paths.search,
-      basename: true,
-      element: <SearchPage />,
-    },
+  
     {
       path: paths.results,
       element: <Results />,
     },
+    {
+      path: paths.search,
+      index: true,
+      element: <SearchPage />,
+    },
 
   ]
-}
+},
 ], {basename:  process.env.PUBLIC_URL});

@@ -1,6 +1,10 @@
 # Workshop Yandex.Мастерская
 
-Проект разработан в рамках участия Workshop от Яндекс.Мастерская 19.09 - 21.09
+Проект разработан в рамках участия Workshop от Яндекс.Мастерская 
+
+# Storybook
+
+https://fenixdeveloper.github.io/it-events-template/?path=/docs/components-sortbar--docs
 
 ## Запуск
 

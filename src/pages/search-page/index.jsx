@@ -5,6 +5,7 @@ import { TopFilterBar, CardList, Loader } from "it-events-frontend";
 import { useEventsContext } from "it-events-frontend";
 import { useIsMobileResolution } from "it-events-frontend";
 
+
 export default function SearchPage() {
   const [isLoading, setIsLoading] = React.useState(false);
   const { popularEvents } = useEventsContext();

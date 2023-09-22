@@ -187,7 +187,7 @@ export const FilterLeftBar = () => {
   const FiltersListItem = useCallback(
     ({ title, children }) => (
       <li className={styles.listItem}>
-        <p className={styles.itemTitle}>{title}</p>
+        <p className="itemTitle">{title}</p>
         {children}
       </li>
     ),
