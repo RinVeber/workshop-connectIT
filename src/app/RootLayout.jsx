@@ -18,7 +18,7 @@ export const RootLayout = () => {
             <Header />
             <Outlet />
             <Routes>
-              <Route exact path="/" element={<SearchPage />} />
+              <Route exact path={process.env.PUBLIC_URL} element={<SearchPage />} />
             </Routes>
 
             <Footer />
