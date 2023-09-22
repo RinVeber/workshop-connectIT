@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/workshop-connectIT/static/css/main.ca0643e3.css",
-    "main.js": "/workshop-connectIT/static/js/main.3dcea16f.js",
+    "main.css": "/workshop-connectIT/static/css/main.fa106352.css",
+    "main.js": "/workshop-connectIT/static/js/main.da2c7c80.js",
     "static/media/Roboto-Medium.woff": "/workshop-connectIT/static/media/Roboto-Medium.b14ca2d2b289afceb0b0.woff",
     "static/media/Roboto-Black.woff": "/workshop-connectIT/static/media/Roboto-Black.88d7f1b3ca9a9494d8e3.woff",
     "static/media/Roboto-Bold.woff": "/workshop-connectIT/static/media/Roboto-Bold.3f2cbde6b72e8d05669f.woff",
@@ -36,11 +36,11 @@
     "static/media/check.svg": "/workshop-connectIT/static/media/check.f3d021e1cd4d42c83d73.svg",
     "static/media/arrow-right.svg": "/workshop-connectIT/static/media/arrow-right.f00d623f399cf74ac05610f07cbe4b7f.svg",
     "static/media/dot.svg": "/workshop-connectIT/static/media/dot.204ffc9d8faa7f1abdd4.svg",
-    "main.ca0643e3.css.map": "/workshop-connectIT/static/css/main.ca0643e3.css.map",
-    "main.3dcea16f.js.map": "/workshop-connectIT/static/js/main.3dcea16f.js.map"
+    "main.fa106352.css.map": "/workshop-connectIT/static/css/main.fa106352.css.map",
+    "main.da2c7c80.js.map": "/workshop-connectIT/static/js/main.da2c7c80.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca0643e3.css",
-    "static/js/main.3dcea16f.js"
+    "static/css/main.fa106352.css",
+    "static/js/main.da2c7c80.js"
   ]
 }
